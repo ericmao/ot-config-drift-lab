@@ -1,0 +1,15 @@
+{
+  "schema_version": 1,
+  "changes": [
+    {
+      "ticket_id": "LAB-CHG-001",
+      "asset_id": "PLC_Runtime_Virtual_01",
+      "path": "/security_controls/gateway_auth_enabled",
+      "before": true,
+      "after": false,
+      "valid_from": "2026-09-30T00:30:00Z",
+      "valid_until": "2026-09-30T01:30:00Z",
+      "status": "approved"
+    }
+  ]
+}

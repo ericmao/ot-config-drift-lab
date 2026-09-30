@@ -1,0 +1,17 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "ot-config-drift-lab"
+version = "0.1.0"
+description = "Evidence-oriented, read-only OT configuration drift research prototype"
+readme = "README.md"
+requires-python = ">=3.9"
+dependencies = []
+
+[project.scripts]
+otdrift = "otdrift.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]

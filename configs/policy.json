@@ -1,0 +1,49 @@
+{
+  "schema_version": 1,
+  "default_severity": "medium",
+  "rules": [
+    {
+      "id": "GATEWAY_AUTH_DISABLED",
+      "path": "/security_controls/gateway_auth_enabled",
+      "when_after": false,
+      "severity": "high",
+      "title": "Gateway authentication disabled",
+      "rationale": "The observed gateway control differs from the approved baseline. Exposure and unauthorized commands require separate network evidence; neither is established by this setting alone.",
+      "references": [
+        "https://www.modbus.org/modbus-specifications",
+        "https://attack.mitre.org/techniques/T0859/"
+      ]
+    },
+    {
+      "id": "GATEWAY_AUTH_CHANGED_OR_MISSING",
+      "path": "/security_controls/gateway_auth_enabled",
+      "severity": "high",
+      "title": "Gateway authentication setting changed or missing",
+      "rationale": "The expected authentication-control value is changed or unavailable in the observed configuration. Verify visibility and device behavior before interpreting the risk.",
+      "references": [
+        "https://www.modbus.org/modbus-specifications"
+      ]
+    },
+    {
+      "id": "REMOTE_ACCESS_ENABLED",
+      "path": "/security_controls/remote_access_enabled",
+      "when_after": true,
+      "severity": "high",
+      "title": "Remote access enabled",
+      "rationale": "Remote access is enabled contrary to the approved baseline. Confirm reachability, access controls, and change authorization.",
+      "references": [
+        "https://csrc.nist.gov/pubs/sp/800/82/r3/final"
+      ]
+    },
+    {
+      "id": "FIRMWARE_CHANGED",
+      "path": "/firmware_version",
+      "severity": "medium",
+      "title": "Firmware version changed",
+      "rationale": "Verify the installed image, vendor release, compatibility, and approved maintenance record.",
+      "references": [
+        "https://csrc.nist.gov/pubs/sp/800/82/r3/final"
+      ]
+    }
+  ]
+}

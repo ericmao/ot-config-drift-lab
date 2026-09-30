@@ -1,0 +1,19 @@
+{
+  "schema_version": 1,
+  "baseline_id": "PLC_Runtime_Virtual_01-approved-v1",
+  "asset_id": "PLC_Runtime_Virtual_01",
+  "captured_at": "2026-09-30T00:00:00Z",
+  "source": "synthetic-approved-fixture",
+  "config": {
+    "firmware_version": "v3.0.1",
+    "network": {
+      "ip_address": "192.168.1.100",
+      "protocol": "modbus_tcp",
+      "port": 502
+    },
+    "security_controls": {
+      "gateway_auth_enabled": true,
+      "remote_access_enabled": false
+    }
+  }
+}
